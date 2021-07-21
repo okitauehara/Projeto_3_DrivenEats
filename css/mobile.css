@@ -1,0 +1,67 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.topo {
+    height: 92px;
+    width: 100%;
+    background-color: #cf2b2b;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 21px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+h1 {
+    font-size: 44px;
+    letter-spacing: -1.2%;
+}
+h2 {
+    font-size: 26px;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+p {
+    font-size: 15px;
+}
+
+
+/* Estilos das cores */
+
+.branco {
+    color: #ffffff;
+}
+.preto {
+    color: #000000;
+}
+.cinza-escuro {
+    color: #333333;
+}
+.cinza {
+    color: #a6a6a6;
+}
+
+/* Estilos dos textos */
+
+.w300 {
+    font-weight: 300;
+}
+.w400 {
+    font-weight: 400;
+}
+.w700 {
+    font-weight: 700;
+}
+.righteous {
+    font-family: 'Righteous', cursive;
+}
