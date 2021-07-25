@@ -1,26 +1,43 @@
+let refeicaoEscolhida;
+let bebidaEscolhida;
+let sobremesaEscolhida;
+
 function selecionarRefeicao (elemento) {
-    const opcaoEscolhida = document.querySelector(".refeicao .escolha-escondida");
-    if (opcaoEscolhida !== null) {
-        opcaoEscolhida.classList.remove("escolha-escondida")
+    refeicaoEscolhida = document.querySelector(".refeicao .escolha-escondida");
+    if (refeicaoEscolhida !== null) {
+        refeicaoEscolhida.classList.remove("escolha-escondida");
     }
 
     elemento.classList.add("escolha-escondida");
 }
  
 function selecionarBebida (elemento) {
-    const opcaoEscolhida = document.querySelector(".bebida .escolha-escondida");
-    if (opcaoEscolhida !== null) {
-        opcaoEscolhida.classList.remove("escolha-escondida")
+    bebidaEscolhida = document.querySelector(".bebida .escolha-escondida");
+    if (bebidaEscolhida !== null) {
+        bebidaEscolhida.classList.remove("escolha-escondida");
     }
 
     elemento.classList.add("escolha-escondida");
 }
 
 function selecionarSobremesa (elemento) {
-    const opcaoEscolhida = document.querySelector(".sobremesa .escolha-escondida");
-    if (opcaoEscolhida !== null) {
-        opcaoEscolhida.classList.remove("escolha-escondida")
+    sobremesaEscolhida = document.querySelector(".sobremesa .escolha-escondida");
+    if (sobremesaEscolhida !== null) {
+        sobremesaEscolhida.classList.remove("escolha-escondida");
     }
 
     elemento.classList.add("escolha-escondida");
+}
+
+function fecharPedido () {
+    let botaoDesativado = document.querySelector("button");
+
+    if (refeicaoEscolhida !== undefined) {
+        if (bebidaEscolhida !== undefined) {
+            if (sobremesaEscolhida !== undefined) {
+                botaoDesativado.classList.add("fechar-pedido");
+                botaoDesativado.innerHTML = "Fechar pedido";
+            }
+        }
+    }
 }

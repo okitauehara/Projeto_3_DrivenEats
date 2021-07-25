@@ -18,11 +18,11 @@
         <h1 class="branco righteous">DrivenEats</h1>
         <h4 class="branco w400">Sua comida em 6 minutos</h4>
     </div>
-    <div class="container">
+    <div class="container" onclick="fecharPedido();">
         <div class="menu">
             <h2 class="righteous cinza-escuro">Primeiro, seu prato</h2>
             <ul class="opcoes refeicao">
-                <li onclick="selecionarRefeicao(this);" class="opcao-refeicao">
+                <li onclick="selecionarRefeicao(this); exibirCheck(this);" class="opcao-refeicao">
                     <img src="img/frango_yin_yang 1.png">
                     <h5 class="w700 cinza-escuro">Frango Yin Yang</h5>
                     <p class="w300 cinza">Um pouco de batata, um pouco de salada</p>
@@ -125,10 +125,9 @@
             </ul>
         </div>
     </div>
-
-    <div class="borda">
+    <div class="botao-desativado">
         <button>Selecione os 3 itens para fechar o pedido</button>
-    </div>
+    </div> 
 
     <script src="scripts.js"></script>
 
