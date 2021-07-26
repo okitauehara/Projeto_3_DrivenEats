@@ -9,6 +9,8 @@ let nomeRefeicao;
 let nomeBebida;
 let nomeSobremesa;
 
+// Funções de marcação de item selecionado //
+
 function selecionarRefeicao(escolha) {
     refeicaoEscolhida = document.querySelector(".refeicoes .selecionar");
     if (refeicaoEscolhida !== null) {
@@ -42,6 +44,8 @@ function selecionarSobremesa(escolha) {
     escolha.classList.remove("escondido");
 }
 
+// Funções para retornar valor do item selecionado //
+
 function obterValorRefeicao(elemento) {
     let stringRefeicao = elemento.querySelector(".refeicao .valor").innerHTML
     let removerR$ = stringRefeicao.replace('R$', '');
@@ -73,18 +77,24 @@ function valorPedido() {
     return valorReais
 }
 
+// Funções para retornar o nome do item selecionado //
+
 function obterNomeRefeicao(elemento) {
     nomeRefeicao = elemento.querySelector(".refeicao .nome-produto").innerHTML;
     return nomeRefeicao;
 }
+
 function obterNomeBebida(elemento) {
     nomeBebida = elemento.querySelector(".bebida .nome-produto").innerHTML;
     return nomeBebida;
 }
+
 function obterNomeSobremesa(elemento) {
     nomeSobremesa = elemento.querySelector(".sobremesa .nome-produto").innerHTML;
     return nomeSobremesa;
 }
+
+// Alterar o botão da borda ao selecionar os itens de cada menu //
 
 function fecharPedido() {
     let botaoDesativado = document.querySelector("button");
@@ -98,6 +108,8 @@ function fecharPedido() {
         }
     }
 }
+
+// Encaminhar para o WhatsApp com a confirmação do pedido //
 
 function finalizarPedido() {
     const botaoConfirmar = document.querySelector("button");

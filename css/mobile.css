@@ -2,6 +2,13 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #e5e5e5;
 }
+
+.container {
+    margin: 123px auto 108px 19px;
+}
+
+/* Estilos do topo fixo */
+
 .topo {
     width: 100%;
     height: 92px;
@@ -21,31 +28,8 @@ body {
     top: 0;
     z-index: 10;
 }
-h1 {
-    font-size: 44px;
-    letter-spacing: -1.2%;
-}
-h2 {
-    font-size: 26px;
-    letter-spacing: 1.8%;
-    margin-bottom: 17px;
-}
-h3 {
-    font-size: 20px;
-}
-h4 {
-    font-size: 18px;
-}
-h5 {
-    font-size: 16px;
-}
-p {
-    font-size: 15px;
-    width: 147px;
-}
-.container {
-    margin: 123px auto 108px 19px;
-}
+
+/* Estilos dos menus */
 
 .menu {
     display: flex;
@@ -95,50 +79,15 @@ ion-icon {
 
     color: #32b72f;
 }
-.escondido ion-icon {
-    display: none;
-}
-.opcao-bebida {
-    width: 144px;
-    height: 168px;
-
-    background-color: #ffffff;
-    border-radius: 9px;
-    box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
-    border: 8px solid #ffffff;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    position: relative;
-
-    padding: 10px 5px 8px 7px;
-    margin-right: 16px;
-}
-.opcao-sobremesa {
-    width: 144px;
-    height: 162px;
-
-    background-color: #ffffff;
-    border-radius: 9px;
-    box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
-    border: 8px solid #ffffff;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    position: relative;
-
-    padding: 11px 5px 8px 7px;
-    margin-right: 16px;
-}
 img {
     width: 144px;
     height: 87px;
+    object-fit: cover;
     border-radius: 4px;
 }
+
+/* Estilos da borda fixa */
+
 .botao-desativado {
     width: 100%;
     height: 92px;
@@ -172,6 +121,14 @@ button {
     text-align: center;
 }
 
+/* Estilos invocados pelo Javascript */
+
+.selecionar {
+    border: 8px solid #32b72f;
+}
+.escondido ion-icon {
+    display: none;
+}
 .fechar-pedido {
     background-color: #32b72f;
     color: #ffffff;
@@ -181,8 +138,30 @@ button {
 .fechar-pedido:hover {
     cursor: pointer;
 }
-.selecionar {
-    border: 8px solid #32b72f;
+
+/* Estilo dos títulos e parágrafos */
+
+h1 {
+    font-size: 44px;
+    letter-spacing: -1.2%;
+}
+h2 {
+    font-size: 26px;
+    letter-spacing: 1.8%;
+    margin-bottom: 17px;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+p {
+    font-size: 15px;
+    width: 147px;
 }
 
 /* Estilos das cores */
