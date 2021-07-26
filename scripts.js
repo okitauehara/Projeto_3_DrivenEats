@@ -1,35 +1,92 @@
 let refeicaoEscolhida;
 let bebidaEscolhida;
 let sobremesaEscolhida;
+let valorRefeicao;
+let valorBebida;
+let valorSobremesa;
+let valorReais
+let nomeRefeicao;
+let nomeBebida;
+let nomeSobremesa;
 
-function selecionarRefeicao (elemento) {
-    refeicaoEscolhida = document.querySelector(".refeicao .escolha-escondida");
+function selecionarRefeicao(escolha) {
+    refeicaoEscolhida = document.querySelector(".refeicoes .selecionar");
     if (refeicaoEscolhida !== null) {
-        refeicaoEscolhida.classList.remove("escolha-escondida");
+        refeicaoEscolhida.classList.remove("selecionar");
+        refeicaoEscolhida.classList.add("escondido");
     }
 
-    elemento.classList.add("escolha-escondida");
+    escolha.classList.add("selecionar");
+    escolha.classList.remove("escondido");
 }
- 
-function selecionarBebida (elemento) {
-    bebidaEscolhida = document.querySelector(".bebida .escolha-escondida");
+
+function selecionarBebida(escolha) {
+    bebidaEscolhida = document.querySelector(".bebidas .selecionar");
     if (bebidaEscolhida !== null) {
-        bebidaEscolhida.classList.remove("escolha-escondida");
+        bebidaEscolhida.classList.remove("selecionar");
+        bebidaEscolhida.classList.add("escondido");
     }
 
-    elemento.classList.add("escolha-escondida");
+    escolha.classList.add("selecionar");
+    escolha.classList.remove("escondido");
 }
 
-function selecionarSobremesa (elemento) {
-    sobremesaEscolhida = document.querySelector(".sobremesa .escolha-escondida");
+function selecionarSobremesa(escolha) {
+    sobremesaEscolhida = document.querySelector(".sobremesas .selecionar");
     if (sobremesaEscolhida !== null) {
-        sobremesaEscolhida.classList.remove("escolha-escondida");
+        sobremesaEscolhida.classList.remove("selecionar");
+        sobremesaEscolhida.classList.add("escondido");
     }
 
-    elemento.classList.add("escolha-escondida");
+    escolha.classList.add("selecionar");
+    escolha.classList.remove("escondido");
 }
 
-function fecharPedido () {
+function obterValorRefeicao(elemento) {
+    let stringRefeicao = elemento.querySelector(".refeicao .valor").innerHTML
+    let removerR$ = stringRefeicao.replace('R$', '');
+    valorRefeicao = removerR$.replace(',', '.');
+    
+    return Number(valorRefeicao);
+}
+
+function obterValorBebida(elemento) {
+    let stringBebida = elemento.querySelector(".bebida .valor").innerHTML
+    let removerR$ = stringBebida.replace('R$', '');
+    valorBebida = removerR$.replace(',', '.');
+    
+    return Number(valorBebida);
+}
+
+function obterValorSobremesa(elemento) {
+    let stringSobremesa = elemento.querySelector(".sobremesa .valor").innerHTML
+    let removerR$ = stringSobremesa.replace('R$', '');
+    valorSobremesa = removerR$.replace(',', '.');
+    
+    return Number(valorSobremesa);
+}
+
+function valorPedido() {
+    let valorTotal = (Number(valorRefeicao) + Number(valorBebida) + Number(valorSobremesa));
+    valorReais = valorTotal.toFixed(2)
+
+    return valorReais
+}
+
+function obterNomeRefeicao(elemento) {
+    nomeRefeicao = elemento.querySelector(".refeicao .nome-produto").innerHTML;
+    return nomeRefeicao;
+}
+function obterNomeBebida(elemento) {
+    nomeBebida = elemento.querySelector(".bebida .nome-produto").innerHTML;
+    return nomeBebida;
+}
+function obterNomeSobremesa(elemento) {
+    nomeSobremesa = elemento.querySelector(".sobremesa .nome-produto").innerHTML;
+    return nomeSobremesa;
+}
+
+function fecharPedido() {
     let botaoDesativado = document.querySelector("button");
 
     if (refeicaoEscolhida !== undefined) {
@@ -39,5 +96,18 @@ function fecharPedido () {
                 botaoDesativado.innerHTML = "Fechar pedido";
             }
         }
+    }
+}
+
+function finalizarPedido() {
+    const botaoConfirmar = document.querySelector("button");
+
+    if (botaoConfirmar.classList.contains("fechar-pedido")) {
+        const mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+- Prato: ${nomeRefeicao}
+- Bebida: ${nomeBebida}
+- Sobremesa: ${nomeSobremesa}
+Total: R$${valorReais}`);
+        window.location.href = `https://wa.me/5541999352531?text=${mensagem}`;
     }
 }

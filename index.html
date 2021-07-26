@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -18,117 +19,133 @@
         <h1 class="branco righteous">DrivenEats</h1>
         <h4 class="branco w400">Sua comida em 6 minutos</h4>
     </div>
-    <div class="container" onclick="fecharPedido();">
+    <div class="container" onclick="fecharPedido(); valorPedido()">
         <div class="menu">
             <h2 class="righteous cinza-escuro">Primeiro, seu prato</h2>
-            <ul class="opcoes refeicao">
-                <li onclick="selecionarRefeicao(this); exibirCheck(this);" class="opcao-refeicao">
+            <ul class="opcoes refeicoes">
+                <li onclick="selecionarRefeicao(this); obterValorRefeicao(this); obterNomeRefeicao(this);" class="opcao refeicao escondido">
                     <img src="img/frango_yin_yang 1.png">
-                    <h5 class="w700 cinza-escuro">Frango Yin Yang</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Frango Yin Yang</h5>
                     <p class="w300 cinza">Um pouco de batata, um pouco de salada</p>
-                    <h5 class="w400 preto">R$ 10,90</h5>
+                    <h5 class="valor w400 preto">R$ 10,90</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarRefeicao(this);" class="opcao-refeicao">
+                <li onclick="selecionarRefeicao(this); obterValorRefeicao(this); obterNomeRefeicao(this);" class="opcao refeicao escondido">
                     <img src="img/frango_yin_yang 1.png">
-                    <h5 class="w700 cinza-escuro">Frango Yin Yang</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Frango Yin</h5>
                     <p class="w300 cinza">Um pouco de batata, um pouco de salada</p>
-                    <h5 class="w400 preto">R$ 11,90</h5>
+                    <h5 class="valor w400 preto">R$ 11,90</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarRefeicao(this);" class="opcao-refeicao">
+                <li onclick="selecionarRefeicao(this); obterValorRefeicao(this); obterNomeRefeicao(this);" class="opcao refeicao escondido">
                     <img src="img/frango_yin_yang 1.png">
-                    <h5 class="w700 cinza-escuro">Frango Yin Yang</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Frango Yang</h5>
                     <p class="w300 cinza">Um pouco de batata, um pouco de salada</p>
-                    <h5 class="w400 preto">R$ 12,90</h5>
+                    <h5 class="valor w400 preto">R$ 12,90</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarRefeicao(this);" class="opcao-refeicao">
+                <li onclick="selecionarRefeicao(this); obterValorRefeicao(this); obterNomeRefeicao(this);" class="opcao refeicao escondido">
                     <img src="img/frango_yin_yang 1.png">
-                    <h5 class="w700 cinza-escuro">Frango Yin Yang</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Frango Yin Yang</h5>
                     <p class="w300 cinza">Um pouco de batata, um pouco de salada</p>
-                    <h5 class="w400 preto">R$ 13,90</h5>
+                    <h5 class="valor w400 preto">R$ 13,90</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarRefeicao(this);" class="opcao-refeicao">
+                <li onclick="selecionarRefeicao(this); obterValorRefeicao(this); obterNomeRefeicao(this);" class="opcao refeicao escondido">
                     <img src="img/frango_yin_yang 1.png">
-                    <h5 class="w700 cinza-escuro">Frango Yin Yang</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Frango Yin Yang</h5>
                     <p class="w300 cinza">Um pouco de batata, um pouco de salada</p>
-                    <h5 class="w400 preto">R$ 14,90</h5>
+                    <h5 class="valor w400 preto">R$ 14,90</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-            </ul> 
+            </ul>
         </div>
         <div class="menu">
             <h2 class="righteous cinza-escuro">Agora, sua bebida</h2>
-            <ul class="opcoes bebida">
-                <li onclick="selecionarBebida(this);" class="opcao-bebida">
+            <ul class="opcoes bebidas">
+                <li onclick="selecionarBebida(this,); obterValorBebida(this); obterNomeBebida(this);" class="opcao bebida escondido">
                     <img src="img/coquinha_gelada 1.png">
-                    <h5 class="w700 cinza-escuro">Coquinha gelada</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Coquinha gelada</h5>
                     <p class="w300 cinza">Lata 350ml</p>
-                    <h5 class="w400 preto">R$ 4,50</h5>
+                    <h5 class="valor w400 preto">R$ 4,50</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarBebida(this);" class="opcao-bebida">
+                <li onclick="selecionarBebida(this); obterValorBebida(this); obterNomeBebida(this);" class="opcao bebida escondido">
                     <img src="img/coquinha_gelada 1.png">
-                    <h5 class="w700 cinza-escuro">Coquinha gelada</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Coquinha gelada</h5>
                     <p class="w300 cinza">Lata 350ml</p>
-                    <h5 class="w400 preto">R$ 4,60</h5>
+                    <h5 class="valor w400 preto">R$ 4,60</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarBebida(this);" class="opcao-bebida">
+                <li onclick="selecionarBebida(this); obterValorBebida(this); obterNomeBebida(this);" class="opcao bebida escondido">
                     <img src="img/coquinha_gelada 1.png">
-                    <h5 class="w700 cinza-escuro">Coquinha gelada</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Coquinha gelada</h5>
                     <p class="w300 cinza">Lata 350ml</p>
-                    <h5 class="w400 preto">R$ 4,70</h5>
+                    <h5 class="valor w400 preto">R$ 4,70</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarBebida(this);" class="opcao-bebida">
+                <li onclick="selecionarBebida(this); obterValorBebida(this); obterNomeBebida(this);" class="opcao bebida escondido">
                     <img src="img/coquinha_gelada 1.png">
-                    <h5 class="w700 cinza-escuro">Coquinha gelada</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Coquinha gelada</h5>
                     <p class="w300 cinza">Lata 350ml</p>
-                    <h5 class="w400 preto">R$ 4,80</h5>
+                    <h5 class="valor w400 preto">R$ 4,80</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarBebida(this);" class="opcao-bebida">
+                <li onclick="selecionarBebida(this); obterValorBebida(this); obterNomeBebida(this);" class="opcao bebida escondido">
                     <img src="img/coquinha_gelada 1.png">
-                    <h5 class="w700 cinza-escuro">Coquinha gelada</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Coquinha gelada</h5>
                     <p class="w300 cinza">Lata 350ml</p>
-                    <h5 class="w400 preto">R$ 4,90</h5>
+                    <h5 class="valor w400 preto">R$ 4,90</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-            </ul>   
+            </ul>
         </div>
         <div class="menu">
             <h2 class="righteous cinza-escuro">Por fim, sua sobremesa</h2>
-            <ul class="opcoes sobremesa">
-                <li onclick="selecionarSobremesa(this);" class="opcao-sobremesa">
+            <ul class="opcoes sobremesas">
+                <li onclick="selecionarSobremesa(this); obterValorSobremesa(this); obterNomeSobremesa(this);" class="opcao sobremesa escondido">
                     <img src="img/pudim 1.png">
-                    <h5 class="w700 cinza-escuro">Pudim</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Pudim</h5>
                     <p class="w300 cinza">Apenas pudim</p>
-                    <h5 class="w400 preto">R$ 7,50</h5>
+                    <h5 class="valor w400 preto">R$ 7,50</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarSobremesa(this);" class="opcao-sobremesa">
+                <li onclick="selecionarSobremesa(this); obterValorSobremesa(this); obterNomeSobremesa(this);" class="opcao sobremesa escondido">
                     <img src="img/pudim 1.png">
-                    <h5 class="w700 cinza-escuro">Pudim</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Pudim</h5>
                     <p class="w300 cinza">Apenas pudim</p>
-                    <h5 class="w400 preto">R$ 7,60</h5>
+                    <h5 class="valor w400 preto">R$ 7,60</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarSobremesa(this);" class="opcao-sobremesa">
+                <li onclick="selecionarSobremesa(this); obterValorSobremesa(this); obterNomeSobremesa(this);" class="opcao sobremesa escondido">
                     <img src="img/pudim 1.png">
-                    <h5 class="w700 cinza-escuro">Pudim</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Pudim</h5>
                     <p class="w300 cinza">Apenas pudim</p>
-                    <h5 class="w400 preto">R$ 7,70</h5>
+                    <h5 class="valor w400 preto">R$ 7,70</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarSobremesa(this);" class="opcao-sobremesa">
+                <li onclick="selecionarSobremesa(this); obterValorSobremesa(this); obterNomeSobremesa(this);" class="opcao sobremesa escondido">
                     <img src="img/pudim 1.png">
-                    <h5 class="w700 cinza-escuro">Pudim</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Pudim</h5>
                     <p class="w300 cinza">Apenas pudim</p>
-                    <h5 class="w400 preto">R$ 7,80</h5>
+                    <h5 class="valor w400 preto">R$ 7,80</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
-                <li onclick="selecionarSobremesa(this);" class="opcao-sobremesa">
+                <li onclick="selecionarSobremesa(this); obterValorSobremesa(this); obterNomeSobremesa(this);" class="opcao sobremesa escondido">
                     <img src="img/pudim 1.png">
-                    <h5 class="w700 cinza-escuro">Pudim</h5>
+                    <h5 class="nome-produto w700 cinza-escuro">Pudim</h5>
                     <p class="w300 cinza">Apenas pudim</p>
-                    <h5 class="w400 preto">R$ 7,90</h5>
+                    <h5 class="valor w400 preto">R$ 7,90</h5>
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </li>
             </ul>
         </div>
     </div>
     <div class="botao-desativado">
-        <button>Selecione os 3 itens para fechar o pedido</button>
-    </div> 
+        <button onclick="finalizarPedido();">Selecione os 3 itens para fechar o pedido</button>
+    </div>
 
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="scripts.js"></script>
 
 </body>

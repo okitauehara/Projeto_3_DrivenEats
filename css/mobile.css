@@ -57,9 +57,8 @@ p {
     margin-bottom: 27px;
     overflow-x: scroll;
 }
-.opcao-refeicao {
+.opcao {
     width: 144px;
-    height: 185px;
 
     background-color: #ffffff;
     border-radius: 9px;
@@ -72,8 +71,32 @@ p {
     justify-content: space-between;
     position: relative;
 
-    padding: 10px 6px 5px 6px;
     margin-right: 16px;
+}
+.refeicao {
+    height: 185px;
+    padding: 10px 6px 5px 6px;
+}
+.bebida {
+    height: 168px;
+    padding: 10px 5px 8px 7px;
+}
+.sobremesa {
+    height: 162px;
+    padding: 11px 5px 8px 7px;
+}
+ion-icon {
+    width: 19px;
+    height: 19px;
+
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+
+    color: #32b72f;
+}
+.escondido ion-icon {
+    display: none;
 }
 .opcao-bebida {
     width: 144px;
@@ -88,6 +111,7 @@ p {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    position: relative;
 
     padding: 10px 5px 8px 7px;
     margin-right: 16px;
@@ -105,6 +129,7 @@ p {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    position: relative;
 
     padding: 11px 5px 8px 7px;
     margin-right: 16px;
@@ -156,7 +181,7 @@ button {
 .fechar-pedido:hover {
     cursor: pointer;
 }
-.escolha-escondida {
+.selecionar {
     border: 8px solid #32b72f;
 }
 
