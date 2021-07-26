@@ -8,6 +8,8 @@ let valorReais
 let nomeRefeicao;
 let nomeBebida;
 let nomeSobremesa;
+let nomeCliente;
+let enderecoCliente;
 
 // Funções de marcação de item selecionado //
 
@@ -109,7 +111,13 @@ function fecharPedido() {
     }
 }
 
-// Encaminhar para o WhatsApp com a confirmação do pedido //
+// Encaminhar para o WhatsApp com a confirmação dos dados de entrega do pedido //
+
+function dadosEntrega() {
+    nomeCliente = prompt("Qual o seu nome completo?");
+    enderecoCliente = prompt("Qual o endereço de entrega? (Nome da rua, número");
+    return nomeCliente, enderecoCliente
+}
 
 function finalizarPedido() {
     const botaoConfirmar = document.querySelector("button");
@@ -119,7 +127,10 @@ function finalizarPedido() {
 - Prato: ${nomeRefeicao}
 - Bebida: ${nomeBebida}
 - Sobremesa: ${nomeSobremesa}
-Total: R$${valorReais}`);
+Total: R$${valorReais}
+
+Nome: ${nomeCliente}
+Endereço: ${enderecoCliente}`);
         window.location.href = `https://wa.me/5541999352531?text=${mensagem}`;
     }
 }
